@@ -1,14 +1,117 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Jornada do Microplástico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Source+Sans+3:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
-    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#infografico">Infográfico</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>A Jornada do Microplástico</h1>
+            <p>Descubra o caminho invisível que os microplásticos percorrem do seu consumo até os oceanos e seus impactos no meio ambiente</p>
+        </div>
+        <div class="onda"></div>
+    </section>
+
+    <section id="infografico">
+        <div class="container">
+            <h2>O Ciclo do Microplástico</h2>
+            <p>Os microplásticos são pequenas partículas de plástico (menores que 5mm) que percorrem um longo caminho até chegar aos oceanos, causando danos ao ecossistema marinho.</p>
+            
+            <div class="infografico-container">
+                <div class="caminho-microplastico">
+                    <div class="etapa">
+                        <div class="etapa-icon">🛍️</div>
+                        <h3>Consumo</h3>
+                        <p>Produtos plásticos do dia a dia</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🗑️</div>
+                        <h3>Descarte</h3>
+                        <p>Resíduos plásticos mal gerenciados</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🚿</div>
+                        <h3>Esgoto</h3>
+                        <p>Transporte por sistemas de drenagem</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🌊</div>
+                        <h3>Rios</h3>
+                        <p>Transporte para os grandes rios</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🐠</div>
+                        <h3>Oceano</h3>
+                        <p>Acúmulo nos mares e oceanos</p>
+                    </div>
+                    
+                    <div class="linha-caminho">
+                        <svg width="100%" height="100%" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+                            <path id="caminho" d="M100,100 C200,50 300,300 400,250 C500,200 600,350 700,300 C800,250 900,150 900,150" fill="none" stroke="#1a6ca6" stroke-width="3" stroke-dasharray="5,5" />
+                        </svg>
+                    </div>
+                    
+                    <div class="microplastico" id="microplastico"></div>
+                </div>
+                
+                <div class="controles">
+                    <button class="btn-controle" id="btn-iniciar">Iniciar Jornada</button>
+                    <button class="btn-controle" id="btn-resetar">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dicas">
+        <div class="container">
+            <h2>Como Reduzir o Consumo de Plástico</h2>
+            <p>Pequenas mudanças no seu dia a dia podem fazer uma grande diferença. Veja como contribuir para reduzir os microplásticos:</p>
+            
+            <div class="dicas-grid">
+                <div class="dica-card">
+                    <div class="dica-icon">🛒</div>
+                    <h3>Prefira Embalagens Reutilizáveis</h3>
+                    <p>Use sacolas de pano, recipientes de vidro e evite plásticos descartáveis.</p>
+                </div>
+                
+                <div class="dica-card">
+                    <div class="dica-icon">🚰</div>
+                    <h3>Filtre a Água da Torneira</h3>
+                    <p>Evite garrafas plásticas com filtros domésticos e garrafas reutilizáveis.</p>
+                </div>
+                
+                <div class="dica-card">
+                    <div class="dica-icon">👕</div>
+                    <h3>Escolha Tecidos Naturais</h3>
+                    <p>Prefira algodão, linho e lã em vez de tecidos sintéticos que soltam microplásticos.</p>
+                </div>
+                
+                <div class="dica-card">
+                    <div class="dica-icon">🧴</div>
+                    <h3>Cosméticos Conscientes</h3>
+                    <p>Evite produtos com microesferas plásticas. Escolha alternativas naturais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="quiz">
         <div class="container">
             <h2>Teste seu Conhecimento</h2>
@@ -61,6 +164,7 @@
             <p>Desenvolvido com consciência ambiental ♻️</p>
         </div>
     </footer>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>
-<script src="assets/script.js"></script>
