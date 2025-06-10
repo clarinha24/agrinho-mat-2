@@ -9,92 +9,58 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#infografico">Infográfico</a></li>
-                <li><a href="#dicas">Dicas</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
+    <section id="quiz">
         <div class="container">
-            <h1>A Jornada do Microplástico</h1>
-            <p>Descubra o caminho invisível que os microplásticos percorrem até os oceanos</p>
-        </div>
-    </section>
-
-    <section id="infografico">
-        <div class="container">
-            <h2>O Ciclo do Microplástico</h2>
-            <p>Da produção ao oceano: o caminho das partículas invisíveis</p>
+            <h2>Teste seu Conhecimento</h2>
+            <p>Responda ao quiz e descubra o quanto você sabe sobre microplásticos:</p>
             
-            <div class="infografico-container">
-                <div class="caminho-microplastico">
-                    <div class="etapa">
-                        <div class="etapa-icon">🛍️</div>
-                        <h3>Consumo</h3>
-                        <p>Produtos plásticos do dia a dia</p>
+            <div class="quiz-container">
+                <div id="perguntas">
+                    <div class="pergunta" id="pergunta1">
+                        <h3>1. Qual é a principal fonte de microplásticos nos oceanos?</h3>
+                        <div class="opcoes">
+                            <div class="opcao" data-resposta="a">Cosméticos e produtos de higiene</div>
+                            <div class="opcao" data-resposta="b">Pneus de veículos e têxteis sintéticos</div>
+                            <div class="opcao" data-resposta="c">Garrafas plásticas descartadas</div>
+                        </div>
                     </div>
                     
-                    <div class="etapa">
-                        <div class="etapa-icon">🗑️</div>
-                        <h3>Descarte</h3>
-                        <p>Resíduos mal gerenciados</p>
+                    <div class="pergunta" id="pergunta2">
+                        <h3>2. Quanto tempo um microplástico leva para se decompor no meio ambiente?</h3>
+                        <div class="opcoes">
+                            <div class="opcao" data-resposta="a">1-5 anos</div>
+                            <div class="opcao" data-resposta="b">10-20 anos</div>
+                            <div class="opcao" data-resposta="c">Centenas de anos</div>
+                        </div>
                     </div>
                     
-                    <div class="etapa">
-                        <div class="etapa-icon">🚿</div>
-                        <h3>Esgoto</h3>
-                        <p>Transporte por sistemas de drenagem</p>
+                    <div class="pergunta" id="pergunta3">
+                        <h3>3. Como os microplásticos afetam a saúde humana?</h3>
+                        <div class="opcoes">
+                            <div class="opcao" data-resposta="a">Através da ingestão de alimentos e água contaminados</div>
+                            <div class="opcao" data-resposta="b">Causando doenças respiratórias quando inalados</div>
+                            <div class="opcao" data-resposta="c">Todas as alternativas anteriores</div>
+                        </div>
                     </div>
-                    
-                    <div class="etapa">
-                        <div class="etapa-icon">🌊</div>
-                        <h3>Rios</h3>
-                        <p>Caminho para os grandes rios</p>
-                    </div>
-                    
-                    <div class="etapa">
-                        <div class="etapa-icon">🐠</div>
-                        <h3>Oceano</h3>
-                        <p>Acúmulo nos mares</p>
-                    </div>
-                    
-                    <div class="microplastico" id="microplastico"></div>
                 </div>
                 
-                <div class="controles">
-                    <button class="btn-controle" id="btn-iniciar">Iniciar Jornada</button>
-                    <button class="btn-controle" id="btn-resetar">Reiniciar</button>
+                <button class="btn-quiz" id="btn-verificar">Verificar Respostas</button>
+                
+                <div class="resultado" id="resultado">
+                    <h3>Resultado do Quiz</h3>
+                    <p id="pontuacao"></p>
+                    <p id="feedback"></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="dicas">
+    <footer>
         <div class="container">
-            <h2>Como Reduzir o Consumo</h2>
-            <p>Pequenas mudanças, grandes impactos:</p>
-            
-            <div class="dicas-grid">
-                <div class="dica-card">
-                    <div class="dica-icon">🛒</div>
-                    <h3>Embalagens Reutilizáveis</h3>
-                    <p>Prefira recipientes duráveis</p>
-                </div>
-                
-                <div class="dica-card">
-                    <div class="dica-icon">🚰</div>
-                    <h3>Filtre a Água</h3>
-                    <p>Evite garrafas plásticas</p>
-                </div>
-            </div>
+            <p>Projeto 1 - Microplásticos | A Jornada do Microplástico</p>
+            <p>Desenvolvido com consciência ambiental ♻️</p>
         </div>
-    </section>
+    </footer>
 </body>
 </html>
 <script src="assets/script.js"></script>

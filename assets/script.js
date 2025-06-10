@@ -1,43 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
-            const microplastico = document.getElementById('microplastico');
-            const btnIniciar = document.getElementById('btn-iniciar');
-            const btnResetar = document.getElementById('btn-resetar');
+            const opcoes = document.querySelectorAll('.opcao');
+            const btnVerificar = document.getElementById('btn-verificar');
+            const resultado = document.getElementById('resultado');
+            const pontuacao = document.getElementById('pontuacao');
+            const feedback = document.getElementById('feedback');
             
-            const posicoes = [
-                { left: '10%', top: '20%' },
-                { left: '30%', top: '60%' },
-                { left: '50%', top: '20%' },
-                { left: '70%', top: '60%' },
-                { left: '90%', top: '20%' }
-            ];
+            const respostasCorretas = {
+                pergunta1: 'b',
+                pergunta2: 'c',
+                pergunta3: 'c'
+            };
             
-            let etapaAtual = 0;
-            
-            function animar() {
-                if (etapaAtual >= posicoes.length) return;
-                
-                microplastico.style.transition = 'all 2s ease-in-out';
-                microplastico.style.left = posicoes[etapaAtual].left;
-                microplastico.style.top = posicoes[etapaAtual].top;
-                
-                etapaAtual++;
-                
-                if (etapaAtual < posicoes.length) {
-                    setTimeout(animar, 2200);
-                }
-            }
-            
-            btnIniciar.addEventListener('click', function() {
-                etapaAtual = 0;
-                microplastico.style.left = '10%';
-                microplastico.style.top = '20%';
-                setTimeout(animar, 100);
+            opcoes.forEach(opcao => {
+                opcao.addEventListener('click', function() {
+                    const parent = this.parentElement;
+                    parent.querySelectorAll('.opcao').forEach(op => {
+                        op.classList.remove('selecionada');
+                    });
+                    
+                    this.classList.add('selecionada');
+                    this.dataset.selecionada = 'true';
+                });
             });
             
-            btnResetar.addEventListener('click', function() {
-                microplastico.style.transition = 'none';
-                microplastico.style.left = '10%';
-                microplastico.style.top = '20%';
-                etapaAtual = 0;
+            btnVerificar.addEventListener('click', function() {
+                let acertos = 0;
+                
+                for (let i = 1; i <= 3; i++) {
+                    const pergunta = document.getElementById(`pergunta${i}`);
+                    const opcaoSelecionada = pergunta.querySelector('.opcao.selecionada');
+                    
+                    if (opcaoSelecionada && opcaoSelecionada.dataset.resposta === respostasCorretas[`pergunta${i}`]) {
+                        acertos++;
+                        opcaoSelecionada.style.backgroundColor = '#a5d6a7';
+                    } else if (opcaoSelecionada) {
+                        opcaoSelecionada.style.backgroundColor = '#ef9a9a';
+                    }
+                }
+                
+                pontuacao.textContent = `Você acertou ${acertos} de 3 perguntas.`;
+                
+                if (acertos === 3) {
+                    feedback.textContent = 'Parabéns! Você é um expert em microplásticos!';
+                } else if (acertos >= 1) {
+                    feedback.textContent = 'Bom trabalho! Continue aprendendo sobre esse importante tema.';
+                } else {
+                    feedback.textContent = 'Que tal revisar o conteúdo e tentar novamente?';
+                }
+                
+                resultado.style.display = 'block';
+                resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
