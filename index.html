@@ -6,6 +6,7 @@
     <title>A Jornada do Microplástico</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    </style>
 </head>
 <body>
     <header>
@@ -14,14 +15,86 @@
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#infografico">Infográfico</a></li>
                 <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#quiz">Quiz</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
-        <h1>A Jornada do Microplástico</h1>
-        <p>Descubra o caminho invisível que os microplásticos percorrem até os oceanos</p>
+        <div class="container">
+            <h1>A Jornada do Microplástico</h1>
+            <p>Descubra o caminho invisível que os microplásticos percorrem até os oceanos</p>
+        </div>
+    </section>
+
+    <section id="infografico">
+        <div class="container">
+            <h2>O Ciclo do Microplástico</h2>
+            <p>Da produção ao oceano: o caminho das partículas invisíveis</p>
+            
+            <div class="infografico-container">
+                <div class="caminho-microplastico">
+                    <div class="etapa">
+                        <div class="etapa-icon">🛍️</div>
+                        <h3>Consumo</h3>
+                        <p>Produtos plásticos do dia a dia</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🗑️</div>
+                        <h3>Descarte</h3>
+                        <p>Resíduos mal gerenciados</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🚿</div>
+                        <h3>Esgoto</h3>
+                        <p>Transporte por sistemas de drenagem</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🌊</div>
+                        <h3>Rios</h3>
+                        <p>Caminho para os grandes rios</p>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="etapa-icon">🐠</div>
+                        <h3>Oceano</h3>
+                        <p>Acúmulo nos mares</p>
+                    </div>
+                    
+                    <div class="microplastico" id="microplastico"></div>
+                </div>
+                
+                <div class="controles">
+                    <button class="btn-controle" id="btn-iniciar">Iniciar Jornada</button>
+                    <button class="btn-controle" id="btn-resetar">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dicas">
+        <div class="container">
+            <h2>Como Reduzir o Consumo</h2>
+            <p>Pequenas mudanças, grandes impactos:</p>
+            
+            <div class="dicas-grid">
+                <div class="dica-card">
+                    <div class="dica-icon">🛒</div>
+                    <h3>Embalagens Reutilizáveis</h3>
+                    <p>Prefira recipientes duráveis</p>
+                </div>
+                
+                <div class="dica-card">
+                    <div class="dica-icon">🚰</div>
+                    <h3>Filtre a Água</h3>
+                    <p>Evite garrafas plásticas</p>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
-<script src="assets/script.js"></script>
 </html>
+<script src="assets/script.js"></script>
